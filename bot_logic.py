@@ -22,3 +22,6 @@ def dice_roll(count, sides):
     return rolls, sum(rolls)
 
 result = dice_roll(3, 20)
+
+def meme():
+    return random.choice(["images/meme1.png", "images/meme2.png", "images/meme3.png"])
