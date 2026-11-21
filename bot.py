@@ -4,6 +4,9 @@ from bot_logic import coin_flip
 from bot_logic import rps_game
 from bot_logic import dice_roll
 from bot_logic import meme
+from bot_logic import pollution
+from bot_logic import lottry
+
 # intents variable stores the permissions of the bot
 intents = discord.Intents.default()
 # Enable the permission to read message content
@@ -41,6 +44,10 @@ async def on_message(message):
         with open(meme(), 'rb') as f:
             picture = discord.File(f)
         await message.channel.send(file = picture)
+    elif message .content.startswith("?pollution"):
+        await message.channel.send(pollution())
+    elif message.content.startswith('?Lottery'):
+        await message.channel.send(lottry())
     else:
         await message.channel.send(message.content)
 
